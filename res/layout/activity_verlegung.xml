@@ -6,61 +6,80 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/vorles"
+        android:id="@+id/vorles2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="14dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/zeit"
+        android:id="@+id/zeit2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/vorles"
-        android:layout_below="@+id/vorles"
-        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/vorles2"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button_30m"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button_15m"
-        android:layout_alignRight="@+id/button_15m"
-        android:layout_centerVertical="true"
-        android:text="@string/title_30m" />
-
-    <Button
-        android:id="@+id/button_15m"
+        android:id="@+id/button_15"
         android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_30m"
-        android:layout_alignLeft="@+id/button_ausfallen"
-        android:layout_alignRight="@+id/button_ausfallen"
-        android:layout_marginBottom="24dp"
+        android:layout_alignLeft="@+id/button_30"
+        android:layout_alignRight="@+id/button_30"
+        android:layout_below="@+id/zeit2"
+        android:layout_marginTop="45dp"
         android:text="@string/title_15m" />
 
     <Button
-        android:id="@+id/button_ausfallen"
+        android:id="@+id/button_30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="66dp"
-        android:text="@string/title_ausfallen" />
+        android:layout_alignLeft="@+id/button_ind"
+        android:layout_alignRight="@+id/button_ind"
+        android:layout_below="@+id/button_15"
+        android:layout_marginTop="16dp"
+        android:text="@string/title_30m" />
 
     <Button
         android:id="@+id/button_ind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_ausfallen"
-        android:layout_alignLeft="@+id/button_30m"
-        android:layout_alignRight="@+id/button_30m"
-        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@+id/button_ausfallen"
+        android:layout_alignRight="@+id/button_ausfallen"
+        android:layout_below="@+id/textView2"
         android:text="@string/title_ind" />
+    
+    <Button
+        android:id="@+id/button_ausfallen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_ind"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/title_ausfallen" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zeit2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="@string/subtitle_ver"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_30"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="Oder:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

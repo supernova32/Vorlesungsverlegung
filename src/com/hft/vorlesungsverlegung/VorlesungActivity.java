@@ -7,16 +7,12 @@ import java.util.HashMap;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
-import android.support.v4.app.NavUtils;
 
 public class VorlesungActivity extends Activity {
 	
@@ -70,7 +66,6 @@ public class VorlesungActivity extends Activity {
         		b.putInt("Position", position);
         		myIntent.putExtras(b);
                 startActivityForResult(myIntent, 1111);
-        		//Toast.makeText(VorlesungActivity.this, "ItemClick at item " + list.get(position).get("cameraName"), Toast.LENGTH_LONG ).show();
             }
         });
     }
@@ -123,17 +118,17 @@ public class VorlesungActivity extends Activity {
 				}else temp = ""+b.getInt("Minute");
 				
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case Mathematik2: list.get(0).put("Zeit", b.getInt("Hour")+":"+temp);
+				case Mathematik2: list.get(0).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 									 break;
-				case VerteilteSysteme: list.get(1).put("Zeit", b.getInt("Hour")+":"+temp);
+				case VerteilteSysteme: list.get(1).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 									 break;
-				case Datenbank: list.get(2).put("Zeit", b.getInt("Hour")+":"+temp);
+				case Datenbank: list.get(2).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 				 					 break;
-				case BWL: list.get(3).put("Zeit", b.getInt("Hour")+":"+temp);
+				case BWL: list.get(3).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 				 					 break;
-				case Programmieren2: list.get(4).put("Zeit", b.getInt("Hour")+":"+temp);
+				case Programmieren2: list.get(4).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 				 					 break;
-				case LineareAlgebra: list.get(5).put("Zeit", b.getInt("Hour")+":"+temp);
+				case LineareAlgebra: list.get(5).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 				 					 break;
 				}
 			}

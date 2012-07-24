@@ -3,10 +3,11 @@ package com.hft.vorlesungsverlegung;
 
 import java.util.Calendar;
 
-import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
@@ -14,6 +15,8 @@ import android.util.Log;
 import android.widget.TimePicker;
 
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener{
+	
+	int result = 0;
 	
 	public interface TimePickerDialogListener {
         void onFinishTimePickerDialog();
@@ -64,7 +67,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
 	@Override	
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        b.putInt("Hour", hourOfDay);
+		b.putInt("Hour", hourOfDay);
         b.putInt("Minute", minute);
         Intent parent = getActivity().getIntent();
         parent.putExtras(b);
@@ -75,6 +78,11 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 	public Bundle getBundle(){
 		return b;
 	}
+	
+	public void setResult(){
+		result = 1;
+	}
+
 	
 	public void showDialog(){
 		show(getFragmentManager(), "timePicker");
