@@ -4,8 +4,8 @@
     <string name="main_subtitle">Heutige Vorlesungen:</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_vorlesung">Vorlesungen</string>
-    <string name="title_20m">20 Minuten</string>
-    <string name="title_40m">40 Minuten</string>
+    <string name="title_15m">15 Minuten</string>
+    <string name="title_30m">30 Minuten</string>
     <string name="title_ind">Individuell</string>
     <string name="title_ausfallen">Ausfallen lassen</string>
 

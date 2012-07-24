@@ -24,9 +24,36 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 	@Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the current time as the default values for the picker
-        final Calendar c = Calendar.getInstance();
+		final Calendar c = Calendar.getInstance();
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
+        Log.i("Position", ""+getActivity().getIntent().getExtras().getInt("Position"));
+		switch(getActivity().getIntent().getExtras().getInt("Position")){
+			case 0:
+				hour = 8;
+				minute = 45;
+				break;
+			case 1:
+				hour = 10;
+				minute = 30;
+				break;
+			case 2:
+				hour = 12;
+				minute = 15;
+				break;
+			case 3:
+				hour = 14;
+				minute = 45;
+				break;
+			case 4:
+				hour = 16;
+				minute = 30;
+				break;
+			case 5:
+				hour = 18;
+				minute = 15;
+				break;
+		}
 
         // Create a new instance of TimePickerDialog and return it
         return new TimePickerDialog(getActivity(), this, hour, minute,
@@ -43,7 +70,6 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         parent.putExtras(b);
         TimePickerDialogListener activity = (TimePickerDialogListener) getActivity();
         activity.onFinishTimePickerDialog();
-        //notifyAll();
     }
 	
 	public Bundle getBundle(){

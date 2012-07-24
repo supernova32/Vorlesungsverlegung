@@ -80,56 +80,76 @@ public class VorlesungActivity extends Activity {
 	 */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		if (data != null){
 			Bundle b = data.getExtras();
 			
-			if(b.getInt("Zeit")==20){
+			if(b.getInt("NZ")==15){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case Mathematik2: list.get(0).put("Zeit", list.get(0).get("Zeit")+"+20");
+				case Mathematik2: list.get(0).put("Zeit", list.get(0).get("Zeit")+"+15");
 									 break;
-				case VerteilteSysteme: list.get(1).put("Zeit", list.get(1).get("Zeit")+"+20");
+				case VerteilteSysteme: list.get(1).put("Zeit", list.get(1).get("Zeit")+"+15");
 									 break;
-				case Datenbank: list.get(2).put("Zeit", list.get(2).get("Zeit")+"+20");
+				case Datenbank: list.get(2).put("Zeit", list.get(2).get("Zeit")+"+15");
 				 					 break;
-				case BWL: list.get(3).put("Zeit", list.get(3).get("Zeit")+"+20");
+				case BWL: list.get(3).put("Zeit", list.get(3).get("Zeit")+"+15");
 				 					 break;
-				case Programmieren2: list.get(4).put("Zeit", list.get(4).get("Zeit")+"+20");
+				case Programmieren2: list.get(4).put("Zeit", list.get(4).get("Zeit")+"+15");
 				 					 break;
-				case LineareAlgebra: list.get(5).put("Zeit", list.get(5).get("Zeit")+"+20");
+				case LineareAlgebra: list.get(5).put("Zeit", list.get(5).get("Zeit")+"+15");
 				 					 break;
 				}
 			}
-			else if(b.getInt("Zeit")==40){
+			else if(b.getInt("NZ")==30){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case Mathematik2: list.get(0).put("Zeit", list.get(0).get("Zeit")+"+40");
+				case Mathematik2: list.get(0).put("Zeit", list.get(0).get("Zeit")+"+30");
 									 break;
-				case VerteilteSysteme: list.get(1).put("Zeit", list.get(1).get("Zeit")+"+40");
+				case VerteilteSysteme: list.get(1).put("Zeit", list.get(1).get("Zeit")+"+30");
 									 break;
-				case Datenbank: list.get(2).put("Zeit", list.get(2).get("Zeit")+"+40");
+				case Datenbank: list.get(2).put("Zeit", list.get(2).get("Zeit")+"+30");
 				 					 break;
-				case BWL: list.get(3).put("Zeit", list.get(3).get("Zeit")+"+40");
+				case BWL: list.get(3).put("Zeit", list.get(3).get("Zeit")+"+30");
 				 					 break;
-				case Programmieren2: list.get(4).put("Zeit", list.get(4).get("Zeit")+"+40");
+				case Programmieren2: list.get(4).put("Zeit", list.get(4).get("Zeit")+"+30");
 				 					 break;
-				case LineareAlgebra: list.get(5).put("Zeit", list.get(5).get("Zeit")+"+40");
+				case LineareAlgebra: list.get(5).put("Zeit", list.get(5).get("Zeit")+"+30");
 				 					 break;
 				}
 			}
 			if(b.getInt("Ind")==1){
+				String temp = "";
+				if(b.getInt("Minute") < 10){
+					temp = "0"+b.getInt("Minute");
+				}else temp = ""+b.getInt("Minute");
+				
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case Mathematik2: list.get(0).put("Zeit", b.getInt("Hour")+":"+b.getInt("Minute"));
+				case Mathematik2: list.get(0).put("Zeit", b.getInt("Hour")+":"+temp);
 									 break;
-				case VerteilteSysteme: list.get(1).put("Zeit", b.getInt("Hour")+":"+b.getInt("Minute"));
+				case VerteilteSysteme: list.get(1).put("Zeit", b.getInt("Hour")+":"+temp);
 									 break;
-				case Datenbank: list.get(2).put("Zeit", b.getInt("Hour")+":"+b.getInt("Minute"));
+				case Datenbank: list.get(2).put("Zeit", b.getInt("Hour")+":"+temp);
 				 					 break;
-				case BWL: list.get(3).put("Zeit", b.getInt("Hour")+":"+b.getInt("Minute"));
+				case BWL: list.get(3).put("Zeit", b.getInt("Hour")+":"+temp);
 				 					 break;
-				case Programmieren2: list.get(4).put("Zeit", b.getInt("Hour")+":"+b.getInt("Minute"));
+				case Programmieren2: list.get(4).put("Zeit", b.getInt("Hour")+":"+temp);
 				 					 break;
-				case LineareAlgebra: list.get(5).put("Zeit", b.getInt("Hour")+":"+b.getInt("Minute"));
+				case LineareAlgebra: list.get(5).put("Zeit", b.getInt("Hour")+":"+temp);
+				 					 break;
+				}
+			}
+			if(b.getInt("Ausfall")==1){
+				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
+				case Mathematik2: list.get(0).put("Zeit", "Ausgefallen!");
+									 break;
+				case VerteilteSysteme: list.get(1).put("Zeit", "Ausgefallen!");
+									 break;
+				case Datenbank: list.get(2).put("Zeit", "Ausgefallen!");
+				 					 break;
+				case BWL: list.get(3).put("Zeit", "Ausgefallen!");
+				 					 break;
+				case Programmieren2: list.get(4).put("Zeit", "Ausgefallen!");
+				 					 break;
+				case LineareAlgebra: list.get(5).put("Zeit", "Ausgefallen!");
 				 					 break;
 				}
 			}
