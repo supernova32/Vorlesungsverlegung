@@ -26,7 +26,12 @@ public class VorlesungActivity extends Activity {
 	HashMap<String, String> map2 = new HashMap<String, String>();
 	HashMap<String, String> map3 = new HashMap<String, String>();
 	HashMap<String, String> map4 = new HashMap<String, String>();
-	ListView mainListView; 
+	ListView mainListView;
+	int timeMove1 = 0;
+	int timeMove2 = 0;
+	int timeMove3 = 0;
+	int timeMove4 = 0;
+	int timeMove5 = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,32 +83,41 @@ public class VorlesungActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (data != null){
 			Bundle b = data.getExtras();
-			
 			if(b.getInt("NZ")==15){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case SoftwareEngineering: list.get(0).put("Zeit", list.get(0).get("Zeit")+"+15");
+				case SoftwareEngineering: timeMove1 += 15;
+									 list.get(0).put("Zeit", "8:00+"+timeMove1);
 									 break;
-				case Programmieren1: list.get(1).put("Zeit", list.get(1).get("Zeit")+"+15");
+				case Programmieren1: timeMove2 += 15;
+									 list.get(1).put("Zeit", "9:45+"+timeMove2);
 									 break;
-				case Datenbanken: list.get(2).put("Zeit", list.get(2).get("Zeit")+"+15");
+				case Datenbanken: timeMove3 += 15;
+									 list.get(2).put("Zeit", "11:30+"+timeMove3);
 				 					 break;
-				case SoftwareProjekt1: list.get(3).put("Zeit", list.get(3).get("Zeit")+"+15");
+				case SoftwareProjekt1: timeMove4 += 15;
+									 list.get(3).put("Zeit", "14:00+"+timeMove4);
 				 					 break;
-				case Programmieren2: list.get(4).put("Zeit", list.get(4).get("Zeit")+"+15");
+				case Programmieren2: timeMove5 += 15;
+									 list.get(4).put("Zeit", "17:30+"+timeMove5);
 				 					 break;
 				}
 			}
 			else if(b.getInt("NZ")==30){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case SoftwareEngineering: list.get(0).put("Zeit", list.get(0).get("Zeit")+"+30");
+				case SoftwareEngineering: timeMove1 += 30;
+									 list.get(0).put("Zeit", "8:00+"+timeMove1);
 									 break;
-				case Programmieren1: list.get(1).put("Zeit", list.get(1).get("Zeit")+"+30");
+				case Programmieren1: timeMove2 += 30;
+									 list.get(1).put("Zeit", "9:45+"+timeMove2);
 									 break;
-				case Datenbanken: list.get(2).put("Zeit", list.get(2).get("Zeit")+"+30");
+				case Datenbanken: timeMove3 += 30;
+									 list.get(2).put("Zeit", "11:30+"+timeMove3);
 				 					 break;
-				case SoftwareProjekt1: list.get(3).put("Zeit", list.get(3).get("Zeit")+"+30");
+				case SoftwareProjekt1: timeMove4 += 30;
+									 list.get(3).put("Zeit", "14:00+"+timeMove4);
 				 					 break;
-				case Programmieren2: list.get(4).put("Zeit", list.get(4).get("Zeit")+"+30");
+				case Programmieren2: timeMove5 += 30;
+									 list.get(4).put("Zeit", "17:30+"+timeMove5);
 				 					 break;
 				}
 			}

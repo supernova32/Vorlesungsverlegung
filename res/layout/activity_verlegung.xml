@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="3"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#000000" >
 
     <TextView
         android:id="@+id/vorles2"
@@ -12,6 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
+        android:textColor="#FFFFFF"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/vorles2"
+        android:textColor="#FFFFFF"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -32,6 +35,7 @@
         android:layout_alignRight="@+id/button_30"
         android:layout_below="@+id/zeit2"
         android:layout_marginTop="45dp"
+        android:textColor="#FFFFFF"
         android:text="@string/title_15m" />
 
     <Button
@@ -42,6 +46,7 @@
         android:layout_alignRight="@+id/button_ind"
         android:layout_below="@+id/button_15"
         android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
         android:text="@string/title_30m" />
 
     <Button
@@ -51,6 +56,7 @@
         android:layout_alignLeft="@+id/button_ausfallen"
         android:layout_alignRight="@+id/button_ausfallen"
         android:layout_below="@+id/textView2"
+        android:textColor="#FFFFFF"
         android:text="@string/title_ind" />
     
     <Button
@@ -60,6 +66,7 @@
         android:layout_below="@+id/button_ind"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
         android:text="@string/title_ausfallen" />
 
     <TextView
@@ -69,6 +76,7 @@
         android:layout_below="@+id/zeit2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
+        android:textColor="#FFFFFF"
         android:text="@string/subtitle_ver"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -78,6 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_30"
         android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="22dp"
         android:text="Oder:"
         android:textAppearance="?android:attr/textAppearanceMedium" />

@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textView2"
-        android:paddingTop="10dp" 
-        android:paddingBottom="140dp"
+        android:paddingTop="15dp" 
+        android:paddingBottom="125dp"
         android:background="#000000">
     </ListView>
 
