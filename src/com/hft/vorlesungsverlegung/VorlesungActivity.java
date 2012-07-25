@@ -37,10 +37,11 @@ public class VorlesungActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vorlesung);
-        map.put("Vorlesung", "Software Engineering");
+        setTitle("Meine Vorlesungen");
+        map.put("Vorlesung", "Programmieren 1");
         map.put("Zeit", "8:00");
         list.add(map);        
-        map1.put("Vorlesung", "Programmieren 1");
+        map1.put("Vorlesung", "Software Engineering");
         map1.put("Zeit", "9:45");
         list.add(map1);       
         map2.put("Vorlesung", "Datenbanken");
@@ -85,10 +86,10 @@ public class VorlesungActivity extends Activity {
 			Bundle b = data.getExtras();
 			if(b.getInt("NZ")==15){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case SoftwareEngineering: timeMove1 += 15;
+				case Programmieren1: timeMove1 += 15;
 									 list.get(0).put("Zeit", "8:00+"+timeMove1);
 									 break;
-				case Programmieren1: timeMove2 += 15;
+				case SoftwareEngineering: timeMove2 += 15;
 									 list.get(1).put("Zeit", "9:45+"+timeMove2);
 									 break;
 				case Datenbanken: timeMove3 += 15;
@@ -104,10 +105,10 @@ public class VorlesungActivity extends Activity {
 			}
 			else if(b.getInt("NZ")==30){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case SoftwareEngineering: timeMove1 += 30;
+				case Programmieren1: timeMove1 += 30;
 									 list.get(0).put("Zeit", "8:00+"+timeMove1);
 									 break;
-				case Programmieren1: timeMove2 += 30;
+				case SoftwareEngineering: timeMove2 += 30;
 									 list.get(1).put("Zeit", "9:45+"+timeMove2);
 									 break;
 				case Datenbanken: timeMove3 += 30;
@@ -128,9 +129,9 @@ public class VorlesungActivity extends Activity {
 				}else temp = ""+b.getInt("Minute");
 				
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case SoftwareEngineering: list.get(0).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
+				case Programmieren1: list.get(0).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 									 break;
-				case Programmieren1: list.get(1).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
+				case SoftwareEngineering: list.get(1).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 									 break;
 				case Datenbanken: list.get(2).put("Zeit", "Verlegt auf "+b.getInt("Hour")+":"+temp);
 				 					 break;
@@ -142,9 +143,9 @@ public class VorlesungActivity extends Activity {
 			}
 			if(b.getInt("Ausfall")==1){
 				switch(Vorlesungen.valueOf(b.getString("Vorlesung").replaceAll(" ", ""))){
-				case SoftwareEngineering: list.get(0).put("Zeit", "Ausgefallen!");
+				case Programmieren1: list.get(0).put("Zeit", "Ausgefallen!");
 									 break;
-				case Programmieren1: list.get(1).put("Zeit", "Ausgefallen!");
+				case SoftwareEngineering: list.get(1).put("Zeit", "Ausgefallen!");
 									 break;
 				case Datenbanken: list.get(2).put("Zeit", "Ausgefallen!");
 				 					 break;
