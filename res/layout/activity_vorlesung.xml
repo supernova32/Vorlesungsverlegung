@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:paddingBottom="15dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="8dp"
         android:text="@string/main_subtitle"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -19,8 +19,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1" 
+        android:layout_below="@+id/textView2"
+        android:paddingTop="10dp" 
+        android:paddingBottom="140dp"
         android:background="#000000">
     </ListView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:paddingBottom="10dp"
+        android:text="@string/local_time"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:text="7:00"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignLeft="@+id/textView1"/>
 
 </RelativeLayout>

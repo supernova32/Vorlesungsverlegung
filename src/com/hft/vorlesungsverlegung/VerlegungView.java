@@ -24,7 +24,7 @@ public class VerlegungView extends FragmentActivity implements TimePickerDialogL
 	
 	public void showAlert(){
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage("Studierende werden sofort informiert! Sind Sie sicher?")
+		builder.setMessage("Studierende werden informiert, nachdem Sie eine Uhrzeit wählen. Sind Sie sicher?")
 	       .setCancelable(false)
 	       .setPositiveButton("Ja", new DialogInterface.OnClickListener() {
 	           @Override
@@ -86,7 +86,7 @@ public class VerlegungView extends FragmentActivity implements TimePickerDialogL
 	           @Override
 			public void onClick(DialogInterface dialog, int id) {
 	        	   setResult(RESULT_OK, getIntent().putExtra("NZ", min1));
-	        	   Toast.makeText(VerlegungView.this, " Die Vorlesung würde um "+min1+" min. verschoben!", Toast.LENGTH_LONG).show();
+	        	   Toast.makeText(VerlegungView.this, " Die Vorlesung wurde um "+min1+" min. verschoben!", Toast.LENGTH_LONG).show();
 	        	   finish();
 	           }
 	       })

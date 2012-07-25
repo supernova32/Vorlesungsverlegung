@@ -1,4 +1,4 @@
 package com.hft.vorlesungsverlegung;
 
-public enum Vorlesungen {Mathematik2, VerteilteSysteme, Datenbank, BWL, Programmieren2, LineareAlgebra}
+public enum Vorlesungen {SoftwareEngineering, Programmieren1, Datenbanken, SoftwareProjekt1, Programmieren2}
 

@@ -49,10 +49,6 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 				minute = 45;
 				break;
 			case 4:
-				hour = 16;
-				minute = 30;
-				break;
-			case 5:
 				hour = 18;
 				minute = 15;
 				break;
